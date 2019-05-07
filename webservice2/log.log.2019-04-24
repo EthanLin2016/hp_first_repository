@@ -1,0 +1,2085 @@
+2019-04-24 17:36:53  [ main:0 ] - [ INFO ]  MLog clients using log4j logging.
+2019-04-24 17:36:53  [ main:634 ] - [ INFO ]  Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2019-04-24 17:36:54  [ main:748 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 3000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> myoracle, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2tomxca2lu5vnt59pvb0|4386d484, idleConnectionTestPeriod -> 30, initialPoolSize -> 100, jdbcUrl -> jdbc:oracle:thin:@10.0.9.3:1521:hgmmdb, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 0, maxStatementsPerConnection -> 5, minPoolSize -> 50, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2019-04-24 17:37:39  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1:46603 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1b609c13 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-04-24 17:37:45  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0:52595 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@2fbef1ac -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-04-24 17:37:52  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2:58718 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@75c45731 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-04-24 17:38:14  [ Timer-0:80724 ] - [ WARN ]  com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@25861086 -- APPARENT DEADLOCK!!! Creating emergency threads for unassigned pending tasks!
+2019-04-24 17:38:14  [ Timer-0:80729 ] - [ WARN ]  com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@25861086 -- APPARENT DEADLOCK!!! Complete Status: 
+	Managed Threads: 3
+	Active Threads: 3
+	Active Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@de26e52 (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@cb8d09d (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3987f9f1 (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1)
+	Pending Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@e2a5ab9
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7eaa2ef2
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@56f052d5
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3bce4a8a
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@647fc8b2
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@15151aa
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1c87093
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@e56c3cf
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@62515263
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@48f81402
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@16e9b4bb
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@49586cbd
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@4c4b11e9
+		com.mchange.v2.c3p0.stmt.GooGooStatementCache$1StmtAcquireTask@5484ff20
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@6789b939
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@2df824a
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@1fe2c9bf
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@622b2af3
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@10e9df
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@566a2f81
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@5554ea79
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@39edd9b3
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@2e6f947b
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@1f7d2f0e
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@539c5048
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@3b5ad1da
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@47875da7
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@815a3a1
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@44a9a32c
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@5d17c0eb
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@427ab40c
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@5c2a1ed
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@2d14d18f
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@31ca1a68
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@4b8bbb61
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@42bb0406
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@4054824
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@76c3358b
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@9f07597
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@9b8119a
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@138b9a72
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@3248bc64
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@45486306
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@135d4273
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@4fb595f3
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@1a87ad67
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@418952cc
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@1e9af0b1
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@4e300429
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@326147d9
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@10b41166
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@1de2481b
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@72ebf3f0
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@60dc4c81
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@1f22dad5
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@294ce5eb
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@778abc7b
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@355c6c8d
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@46dab859
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@417cff66
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@7563a320
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@606ac615
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@1f2be27
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@67a1f370
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@39757337
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@4ddf3d59
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@7b34c5ff
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@45b3278a
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@74e8f8c5
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@6b248979
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@2bbd9de3
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@2dc8b884
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@54c9f997
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@182153fe
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@34115512
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@5de82b72
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@357c7988
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@7f0eeb26
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@2c704cf5
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@cc7f9e
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@71ce5e7a
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@239cd5f5
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@da2da17
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@3e9c22ff
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@7cbdb375
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@a51064e
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@4d74f02c
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@3844006e
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@7878529d
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@2377ff35
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@1b1402c4
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@3ec19fbf
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@19ded4c9
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@7463e563
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@4a690247
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@3414a97b
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@3882e4f3
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@19852a81
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@75a9883d
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@4d2f9924
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@6fef3212
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@40c07527
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@1b4b74a7
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@76d78df0
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@41a7c484
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@6d56d7c8
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@6070c38c
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@b364dcb
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@1a2d502d
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@14eac7c8
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@41e22632
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@6639be68
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@5903d246
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@9e21f52
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@5c76458f
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@58d0deb5
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@78cd6aa0
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@76136c55
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@752d7d02
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@7d6a4a67
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@4d3af084
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@588491b8
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@677af46e
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@394596d5
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@7b19753
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@1c45ce17
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@2add5681
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@295a4523
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@6571120a
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@6257828d
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@5f3c296b
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@66c360a5
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@24fe2558
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@2945c761
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@2424c672
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@6a6078e7
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@63a1bc40
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@f4e40da
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@5a83b00f
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@7b9bd735
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@344e17f9
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@7307f742
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@ffa490e
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@78d23e53
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@32f9f91d
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@3951f910
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@34b6a6d6
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@438346a3
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@5f9299f5
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@11b9d4d8
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@3f44b9ff
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@390f34cc
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@15535a58
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@13505258
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@7e4e194f
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@395fd251
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@41e8e144
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@201d592a
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@66c8e4de
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@f29df8a
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@612e4cd
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@426b51d8
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@13ca5df9
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@4adf9095
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1b8d4c9a
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@59a02097
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1fbbc779
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6124e935
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3e4ac866
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1faac07d
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3435ec9
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3c03dfcb
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@2259a735
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@2bf09a31
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@411b1d80
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@5b2ddfe4
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@20c62080
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@2f7fc44f
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6d3136e5
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3a0b2c64
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@338f7701
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@fcdfd19
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1ca37c6a
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@313d21d6
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@247881db
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@63956391
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@64bbf7aa
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@7080ed90
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@206cc2a4
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@445ead9d
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@23d8417c
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@4ab34646
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3fcac3fa
+		com.mchange.v2.resourcepool.BasicResourcePool$AsyncTestIdleResourceTask@190872ce
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@79a93f38
+		com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask@5675b3ee
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@4977fa9a
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@63e5ba24
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7f1fc4b8
+Pool thread stack traces:
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2,5,main]
+		java.lang.Thread.sleep(Native Method)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0,5,main]
+		java.lang.Thread.sleep(Native Method)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1,5,main]
+		java.lang.Thread.sleep(Native Method)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+
+2019-04-24 17:38:21  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2:87873 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@de26e52 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-04-24 17:38:29  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0:95905 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@cb8d09d -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-04-24 17:38:29  [ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1:95906 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3987f9f1 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-04-24 17:38:43  [ Task-Thread-for-com.mchange.v2.async.ThreadPerTaskAsynchronousRunner@51af4309:109857 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@15151aa -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+2019-04-24 17:38:43  [ Task-Thread-for-com.mchange.v2.async.ThreadPerTaskAsynchronousRunner@51af4309:109869 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@1c87093 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+2019-04-24 17:38:43  [ Task-Thread-for-com.mchange.v2.async.ThreadPerTaskAsynchronousRunner@51af4309:109870 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@e2a5ab9 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+2019-04-24 17:38:43  [ Task-Thread-for-com.mchange.v2.async.ThreadPerTaskAsynchronousRunner@51af4309:109871 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@62515263 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+2019-04-24 17:38:43  [ Task-Thread-for-com.mchange.v2.async.ThreadPerTaskAsynchronousRunner@51af4309:109872 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@647fc8b2 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12519, TNS:no appropriate service handler found
+The Connection descriptor used by the client was:
+10.0.9.3:1521:hgmmdb
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:260)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:386)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:413)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:164)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:34)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:752)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPerTaskAsynchronousRunner$TaskThread.run(ThreadPerTaskAsynchronousRunner.java:255)
+2019-04-24 17:38:44  [ Timer-0:110725 ] - [ WARN ]  com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@25861086 -- APPARENT DEADLOCK!!! Creating emergency threads for unassigned pending tasks!
+2019-04-24 17:38:44  [ Timer-0:110725 ] - [ WARN ]  com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@25861086 -- APPARENT DEADLOCK!!! Complete Status: 
+	Managed Threads: 3
+	Active Threads: 3
+	Active Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@20773d03 (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7446a09b (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@48da5bc0 (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2)
+	Pending Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@77bdbf9d
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@4a6f19d5
+Pool thread stack traces:
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1,5,main]
+		java.lang.Thread.sleep(Native Method)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0,5,main]
+		java.lang.Thread.sleep(Native Method)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2,5,main]
+		java.lang.Thread.sleep(Native Method)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1805)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+
+2019-04-24 17:38:44  [ main:111220 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111220 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111220 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111220 ] - [ INFO ]  MMDetail:NW:60.46
+2019-04-24 17:38:44  [ main:111221 ] - [ INFO ]  MMDetail:TN:冀DN6877
+2019-04-24 17:38:44  [ main:111221 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111221 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111221 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111221 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111221 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111221 ] - [ INFO ]  MMDetail:DNO:TID4608A9382683
+2019-04-24 17:38:44  [ main:111221 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111222 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111222 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111222 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111222 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111222 ] - [ INFO ]  MMDetail:IECODE:IETI20190419003
+2019-04-24 17:38:44  [ main:111222 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111222 ] - [ INFO ]  MMDetail:BILLNO:TI20190419017
+2019-04-24 17:38:44  [ main:111222 ] - [ INFO ]  MMDetail:BILLTM:2019-04-19
+2019-04-24 17:38:44  [ main:111222 ] - [ INFO ]  MMDetail:GW:77.28
+2019-04-24 17:38:44  [ main:111223 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111223 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 03:56:18
+2019-04-24 17:38:44  [ main:111223 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111223 ] - [ INFO ]  MMDetail:WD:60.46
+2019-04-24 17:38:44  [ main:111223 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111223 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111223 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111223 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 05:52:19
+2019-04-24 17:38:44  [ main:111223 ] - [ INFO ]  MMDetail:GJ:60.46
+2019-04-24 17:38:44  [ main:111224 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111224 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111224 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111224 ] - [ INFO ]  MMDetail:PZ:16.82
+2019-04-24 17:38:44  [ main:111224 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111224 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111240 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111240 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111240 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111240 ] - [ INFO ]  MMDetail:NW:149.28
+2019-04-24 17:38:44  [ main:111240 ] - [ INFO ]  MMDetail:TN:冀DN6136
+2019-04-24 17:38:44  [ main:111240 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111240 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111240 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111241 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111241 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111241 ] - [ INFO ]  MMDetail:DNO:TID4708A9382987
+2019-04-24 17:38:44  [ main:111241 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111241 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111241 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111241 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111241 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111241 ] - [ INFO ]  MMDetail:IECODE:IETI20190407001
+2019-04-24 17:38:44  [ main:111242 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111242 ] - [ INFO ]  MMDetail:BILLNO:TI20190407002
+2019-04-24 17:38:44  [ main:111242 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111242 ] - [ INFO ]  MMDetail:GW:179.32
+2019-04-24 17:38:44  [ main:111242 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111242 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 10:03:00
+2019-04-24 17:38:44  [ main:111242 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111242 ] - [ INFO ]  MMDetail:WD:149.28
+2019-04-24 17:38:44  [ main:111242 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111243 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111243 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111243 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 14:55:15
+2019-04-24 17:38:44  [ main:111243 ] - [ INFO ]  MMDetail:GJ:149.28
+2019-04-24 17:38:44  [ main:111243 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111243 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111243 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111243 ] - [ INFO ]  MMDetail:PZ:30.04
+2019-04-24 17:38:44  [ main:111243 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111244 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111244 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111244 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111244 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111244 ] - [ INFO ]  MMDetail:NW:143
+2019-04-24 17:38:44  [ main:111244 ] - [ INFO ]  MMDetail:TN:冀DW8036
+2019-04-24 17:38:44  [ main:111244 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111244 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111244 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111245 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111245 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111245 ] - [ INFO ]  MMDetail:DNO:TID4703A9382864
+2019-04-24 17:38:44  [ main:111245 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111245 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111245 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111245 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111245 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111246 ] - [ INFO ]  MMDetail:IECODE:IETI20190407001
+2019-04-24 17:38:44  [ main:111246 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111246 ] - [ INFO ]  MMDetail:BILLNO:TI20190407002
+2019-04-24 17:38:44  [ main:111246 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111246 ] - [ INFO ]  MMDetail:GW:172.98
+2019-04-24 17:38:44  [ main:111246 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111246 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 08:53:18
+2019-04-24 17:38:44  [ main:111246 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111246 ] - [ INFO ]  MMDetail:WD:143
+2019-04-24 17:38:44  [ main:111246 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111247 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111247 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111247 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 11:13:02
+2019-04-24 17:38:44  [ main:111247 ] - [ INFO ]  MMDetail:GJ:143
+2019-04-24 17:38:44  [ main:111247 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111247 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111247 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111247 ] - [ INFO ]  MMDetail:PZ:29.98
+2019-04-24 17:38:44  [ main:111247 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111248 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111248 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111248 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111248 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111248 ] - [ INFO ]  MMDetail:NW:141.94
+2019-04-24 17:38:44  [ main:111248 ] - [ INFO ]  MMDetail:TN:冀DM9066
+2019-04-24 17:38:44  [ main:111248 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111248 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111248 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111249 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111249 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111249 ] - [ INFO ]  MMDetail:DNO:TID4708A9382860
+2019-04-24 17:38:44  [ main:111249 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111249 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111249 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111249 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111249 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111249 ] - [ INFO ]  MMDetail:IECODE:IETI20190407001
+2019-04-24 17:38:44  [ main:111250 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111250 ] - [ INFO ]  MMDetail:BILLNO:TI20190407002
+2019-04-24 17:38:44  [ main:111250 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111250 ] - [ INFO ]  MMDetail:GW:169.76
+2019-04-24 17:38:44  [ main:111250 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111250 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 08:50:56
+2019-04-24 17:38:44  [ main:111250 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111250 ] - [ INFO ]  MMDetail:WD:141.94
+2019-04-24 17:38:44  [ main:111250 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111251 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111251 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111251 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 09:57:17
+2019-04-24 17:38:44  [ main:111251 ] - [ INFO ]  MMDetail:GJ:141.94
+2019-04-24 17:38:44  [ main:111251 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111251 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111251 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111251 ] - [ INFO ]  MMDetail:PZ:27.82
+2019-04-24 17:38:44  [ main:111251 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111252 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111253 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111253 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111253 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111253 ] - [ INFO ]  MMDetail:NW:143.46
+2019-04-24 17:38:44  [ main:111254 ] - [ INFO ]  MMDetail:TN:冀DR6895
+2019-04-24 17:38:44  [ main:111254 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111254 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111255 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111255 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111255 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111255 ] - [ INFO ]  MMDetail:DNO:TID4711A9382854
+2019-04-24 17:38:44  [ main:111256 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111256 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111256 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111256 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111256 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111256 ] - [ INFO ]  MMDetail:IECODE:IETI20190407001
+2019-04-24 17:38:44  [ main:111256 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111256 ] - [ INFO ]  MMDetail:BILLNO:TI20190407002
+2019-04-24 17:38:44  [ main:111256 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111257 ] - [ INFO ]  MMDetail:GW:173.68
+2019-04-24 17:38:44  [ main:111257 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111257 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 08:47:59
+2019-04-24 17:38:44  [ main:111257 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111257 ] - [ INFO ]  MMDetail:WD:143.46
+2019-04-24 17:38:44  [ main:111257 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111257 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111257 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111257 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 09:43:17
+2019-04-24 17:38:44  [ main:111258 ] - [ INFO ]  MMDetail:GJ:143.46
+2019-04-24 17:38:44  [ main:111258 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111258 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111258 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111258 ] - [ INFO ]  MMDetail:PZ:30.22
+2019-04-24 17:38:44  [ main:111258 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111258 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111258 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111258 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111259 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111259 ] - [ INFO ]  MMDetail:NW:128.92
+2019-04-24 17:38:44  [ main:111259 ] - [ INFO ]  MMDetail:TN:冀DM8969
+2019-04-24 17:38:44  [ main:111259 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111259 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111259 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111259 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111259 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111260 ] - [ INFO ]  MMDetail:DNO:TID4703A9383070
+2019-04-24 17:38:44  [ main:111260 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111260 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111260 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111260 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111260 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111260 ] - [ INFO ]  MMDetail:IECODE:IETI20190407002
+2019-04-24 17:38:44  [ main:111260 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111260 ] - [ INFO ]  MMDetail:BILLNO:TI20190407003
+2019-04-24 17:38:44  [ main:111261 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111261 ] - [ INFO ]  MMDetail:GW:154.74
+2019-04-24 17:38:44  [ main:111261 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111261 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 10:33:42
+2019-04-24 17:38:44  [ main:111261 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111261 ] - [ INFO ]  MMDetail:WD:128.92
+2019-04-24 17:38:44  [ main:111262 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111262 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111262 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111262 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 16:14:55
+2019-04-24 17:38:44  [ main:111262 ] - [ INFO ]  MMDetail:GJ:128.92
+2019-04-24 17:38:44  [ main:111262 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111263 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111263 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111263 ] - [ INFO ]  MMDetail:PZ:25.82
+2019-04-24 17:38:44  [ main:111267 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111268 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111268 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111268 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111268 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111268 ] - [ INFO ]  MMDetail:NW:131.84
+2019-04-24 17:38:44  [ main:111268 ] - [ INFO ]  MMDetail:TN:冀DM8996
+2019-04-24 17:38:44  [ main:111269 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111269 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111269 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111269 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111269 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111269 ] - [ INFO ]  MMDetail:DNO:TID4703A9383053
+2019-04-24 17:38:44  [ main:111269 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111269 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111270 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111270 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111270 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111270 ] - [ INFO ]  MMDetail:IECODE:IETI20190407002
+2019-04-24 17:38:44  [ main:111270 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111270 ] - [ INFO ]  MMDetail:BILLNO:TI20190407003
+2019-04-24 17:38:44  [ main:111270 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111270 ] - [ INFO ]  MMDetail:GW:158.4
+2019-04-24 17:38:44  [ main:111271 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111271 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 10:26:07
+2019-04-24 17:38:44  [ main:111271 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111271 ] - [ INFO ]  MMDetail:WD:131.84
+2019-04-24 17:38:44  [ main:111272 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111276 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111276 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111276 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 15:52:41
+2019-04-24 17:38:44  [ main:111276 ] - [ INFO ]  MMDetail:GJ:131.84
+2019-04-24 17:38:44  [ main:111277 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111277 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111277 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111277 ] - [ INFO ]  MMDetail:PZ:26.56
+2019-04-24 17:38:44  [ main:111277 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111277 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111278 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111278 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111278 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111278 ] - [ INFO ]  MMDetail:NW:113.06
+2019-04-24 17:38:44  [ main:111278 ] - [ INFO ]  MMDetail:TN:冀DT5227
+2019-04-24 17:38:44  [ main:111278 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111278 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111278 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111278 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111279 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111279 ] - [ INFO ]  MMDetail:DNO:TID4610A9382928
+2019-04-24 17:38:44  [ main:111279 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111279 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111279 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111279 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111279 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111279 ] - [ INFO ]  MMDetail:IECODE:IETI20190407002
+2019-04-24 17:38:44  [ main:111279 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111280 ] - [ INFO ]  MMDetail:BILLNO:TI20190407003
+2019-04-24 17:38:44  [ main:111280 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111280 ] - [ INFO ]  MMDetail:GW:132.28
+2019-04-24 17:38:44  [ main:111280 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111280 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 09:31:04
+2019-04-24 17:38:44  [ main:111280 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111280 ] - [ INFO ]  MMDetail:WD:113.06
+2019-04-24 17:38:44  [ main:111280 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111280 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111281 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111281 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 11:55:43
+2019-04-24 17:38:44  [ main:111281 ] - [ INFO ]  MMDetail:GJ:113.06
+2019-04-24 17:38:44  [ main:111281 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111281 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111281 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111281 ] - [ INFO ]  MMDetail:PZ:19.22
+2019-04-24 17:38:44  [ main:111281 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111281 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111282 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111282 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111282 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111282 ] - [ INFO ]  MMDetail:NW:144.2
+2019-04-24 17:38:44  [ main:111282 ] - [ INFO ]  MMDetail:TN:冀DR5448
+2019-04-24 17:38:44  [ main:111282 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111282 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111282 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111282 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111283 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111283 ] - [ INFO ]  MMDetail:DNO:TID4701A9382836
+2019-04-24 17:38:44  [ main:111283 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111283 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111283 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111283 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111283 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111283 ] - [ INFO ]  MMDetail:IECODE:IETI20190407002
+2019-04-24 17:38:44  [ main:111283 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111283 ] - [ INFO ]  MMDetail:BILLNO:TI20190407003
+2019-04-24 17:38:44  [ main:111284 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111284 ] - [ INFO ]  MMDetail:GW:172.94
+2019-04-24 17:38:44  [ main:111284 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111284 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 08:36:18
+2019-04-24 17:38:44  [ main:111284 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111284 ] - [ INFO ]  MMDetail:WD:144.2
+2019-04-24 17:38:44  [ main:111284 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111284 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111285 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111285 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 09:19:54
+2019-04-24 17:38:44  [ main:111285 ] - [ INFO ]  MMDetail:GJ:144.2
+2019-04-24 17:38:44  [ main:111285 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111285 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111285 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111285 ] - [ INFO ]  MMDetail:PZ:28.74
+2019-04-24 17:38:44  [ main:111285 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111285 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111286 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111286 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111286 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111286 ] - [ INFO ]  MMDetail:NW:151.28
+2019-04-24 17:38:44  [ main:111286 ] - [ INFO ]  MMDetail:TN:冀DQ0569
+2019-04-24 17:38:44  [ main:111286 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111286 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111286 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111286 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111287 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111287 ] - [ INFO ]  MMDetail:DNO:TID4708A9382823
+2019-04-24 17:38:44  [ main:111287 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111287 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111287 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111287 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111287 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111287 ] - [ INFO ]  MMDetail:IECODE:IETI20190407002
+2019-04-24 17:38:44  [ main:111288 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111288 ] - [ INFO ]  MMDetail:BILLNO:TI20190407003
+2019-04-24 17:38:44  [ main:111288 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111288 ] - [ INFO ]  MMDetail:GW:178.86
+2019-04-24 17:38:44  [ main:111288 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111288 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 08:24:11
+2019-04-24 17:38:44  [ main:111288 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111288 ] - [ INFO ]  MMDetail:WD:151.28
+2019-04-24 17:38:44  [ main:111288 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111289 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111289 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111289 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 09:12:36
+2019-04-24 17:38:44  [ main:111289 ] - [ INFO ]  MMDetail:GJ:151.28
+2019-04-24 17:38:44  [ main:111289 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111289 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111289 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111289 ] - [ INFO ]  MMDetail:PZ:27.58
+2019-04-24 17:38:44  [ main:111289 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111290 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111290 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111290 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111290 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111290 ] - [ INFO ]  MMDetail:NW:95.7
+2019-04-24 17:38:44  [ main:111290 ] - [ INFO ]  MMDetail:TN:冀DX3638
+2019-04-24 17:38:44  [ main:111290 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111291 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111293 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111294 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111294 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111294 ] - [ INFO ]  MMDetail:DNO:TID4611A9382761
+2019-04-24 17:38:44  [ main:111294 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111294 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111295 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111295 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111295 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111295 ] - [ INFO ]  MMDetail:IECODE:IETI20190407004
+2019-04-24 17:38:44  [ main:111295 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111295 ] - [ INFO ]  MMDetail:BILLNO:TI20190407005
+2019-04-24 17:38:44  [ main:111295 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111295 ] - [ INFO ]  MMDetail:GW:115.7
+2019-04-24 17:38:44  [ main:111296 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111296 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 05:43:41
+2019-04-24 17:38:44  [ main:111296 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111296 ] - [ INFO ]  MMDetail:WD:95.7
+2019-04-24 17:38:44  [ main:111296 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111296 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111296 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111296 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 07:28:49
+2019-04-24 17:38:44  [ main:111296 ] - [ INFO ]  MMDetail:GJ:95.7
+2019-04-24 17:38:44  [ main:111297 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111297 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111297 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111297 ] - [ INFO ]  MMDetail:PZ:20
+2019-04-24 17:38:44  [ main:111297 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111297 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111297 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111297 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111298 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111298 ] - [ INFO ]  MMDetail:NW:91.5
+2019-04-24 17:38:44  [ main:111298 ] - [ INFO ]  MMDetail:TN:冀DY9269
+2019-04-24 17:38:44  [ main:111298 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111298 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111298 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111298 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111298 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111298 ] - [ INFO ]  MMDetail:DNO:TID4704A9382762
+2019-04-24 17:38:44  [ main:111298 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111299 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111300 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111300 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111300 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111300 ] - [ INFO ]  MMDetail:IECODE:IETI20190407004
+2019-04-24 17:38:44  [ main:111301 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111301 ] - [ INFO ]  MMDetail:BILLNO:TI20190407005
+2019-04-24 17:38:44  [ main:111301 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111301 ] - [ INFO ]  MMDetail:GW:111.78
+2019-04-24 17:38:44  [ main:111302 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111302 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 05:43:56
+2019-04-24 17:38:44  [ main:111302 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111302 ] - [ INFO ]  MMDetail:WD:91.5
+2019-04-24 17:38:44  [ main:111302 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111303 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111303 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111303 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 08:40:53
+2019-04-24 17:38:44  [ main:111303 ] - [ INFO ]  MMDetail:GJ:91.5
+2019-04-24 17:38:44  [ main:111303 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111303 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111303 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111303 ] - [ INFO ]  MMDetail:PZ:20.28
+2019-04-24 17:38:44  [ main:111303 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111304 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111304 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111304 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111304 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111304 ] - [ INFO ]  MMDetail:NW:138.56
+2019-04-24 17:38:44  [ main:111304 ] - [ INFO ]  MMDetail:TN:冀DS6638
+2019-04-24 17:38:44  [ main:111304 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111304 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111304 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111305 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111305 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111305 ] - [ INFO ]  MMDetail:DNO:TID4700A9382749
+2019-04-24 17:38:44  [ main:111305 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111305 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111305 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111305 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111305 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111305 ] - [ INFO ]  MMDetail:IECODE:IETI20190407004
+2019-04-24 17:38:44  [ main:111306 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111306 ] - [ INFO ]  MMDetail:BILLNO:TI20190407005
+2019-04-24 17:38:44  [ main:111306 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111306 ] - [ INFO ]  MMDetail:GW:167.06
+2019-04-24 17:38:44  [ main:111306 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111306 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 05:26:33
+2019-04-24 17:38:44  [ main:111306 ] - [ INFO ]  MMDetail:GRP:1904233K131
+2019-04-24 17:38:44  [ main:111306 ] - [ INFO ]  MMDetail:WD:138.56
+2019-04-24 17:38:44  [ main:111306 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111307 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111307 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111307 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 06:59:24
+2019-04-24 17:38:44  [ main:111307 ] - [ INFO ]  MMDetail:GJ:138.56
+2019-04-24 17:38:44  [ main:111307 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111308 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111308 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111308 ] - [ INFO ]  MMDetail:PZ:28.5
+2019-04-24 17:38:44  [ main:111308 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111309 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111309 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111309 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111309 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111310 ] - [ INFO ]  MMDetail:NW:144.78
+2019-04-24 17:38:44  [ main:111310 ] - [ INFO ]  MMDetail:TN:冀DW0989
+2019-04-24 17:38:44  [ main:111310 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111310 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111311 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111311 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111311 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111312 ] - [ INFO ]  MMDetail:DNO:TID4703A9383753
+2019-04-24 17:38:44  [ main:111312 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111312 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111312 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111312 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111312 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111312 ] - [ INFO ]  MMDetail:IECODE:IETI20190407004
+2019-04-24 17:38:44  [ main:111312 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111312 ] - [ INFO ]  MMDetail:BILLNO:TI20190407005
+2019-04-24 17:38:44  [ main:111313 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111313 ] - [ INFO ]  MMDetail:GW:173.06
+2019-04-24 17:38:44  [ main:111313 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111313 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 16:09:41
+2019-04-24 17:38:44  [ main:111313 ] - [ INFO ]  MMDetail:GRP:1904233K136
+2019-04-24 17:38:44  [ main:111313 ] - [ INFO ]  MMDetail:WD:144.78
+2019-04-24 17:38:44  [ main:111313 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111313 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111313 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111314 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 16:59:57
+2019-04-24 17:38:44  [ main:111314 ] - [ INFO ]  MMDetail:GJ:144.78
+2019-04-24 17:38:44  [ main:111314 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111314 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111314 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111314 ] - [ INFO ]  MMDetail:PZ:28.28
+2019-04-24 17:38:44  [ main:111314 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111314 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111314 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111315 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111315 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111315 ] - [ INFO ]  MMDetail:NW:146.6
+2019-04-24 17:38:44  [ main:111315 ] - [ INFO ]  MMDetail:TN:冀DS9727
+2019-04-24 17:38:44  [ main:111315 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111315 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111315 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111315 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111315 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111316 ] - [ INFO ]  MMDetail:DNO:TID4713A9382959
+2019-04-24 17:38:44  [ main:111316 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111316 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111316 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111316 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111316 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111316 ] - [ INFO ]  MMDetail:IECODE:IETI20190407005
+2019-04-24 17:38:44  [ main:111316 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111316 ] - [ INFO ]  MMDetail:BILLNO:TI20190407006
+2019-04-24 17:38:44  [ main:111317 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111317 ] - [ INFO ]  MMDetail:GW:177.6
+2019-04-24 17:38:44  [ main:111317 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111317 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 09:48:08
+2019-04-24 17:38:44  [ main:111317 ] - [ INFO ]  MMDetail:GRP:1904233K135
+2019-04-24 17:38:44  [ main:111317 ] - [ INFO ]  MMDetail:WD:146.6
+2019-04-24 17:38:44  [ main:111318 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111318 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111318 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111319 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 14:22:01
+2019-04-24 17:38:44  [ main:111319 ] - [ INFO ]  MMDetail:GJ:146.6
+2019-04-24 17:38:44  [ main:111319 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111319 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111319 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111320 ] - [ INFO ]  MMDetail:PZ:31
+2019-04-24 17:38:44  [ main:111320 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111320 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111320 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111320 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111320 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111321 ] - [ INFO ]  MMDetail:NW:104.24
+2019-04-24 17:38:44  [ main:111321 ] - [ INFO ]  MMDetail:TN:冀DX8117
+2019-04-24 17:38:44  [ main:111321 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111321 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111322 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111322 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111322 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111322 ] - [ INFO ]  MMDetail:DNO:TID4613A9382949
+2019-04-24 17:38:44  [ main:111322 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111322 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111322 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111322 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111322 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111322 ] - [ INFO ]  MMDetail:IECODE:IETI20190407005
+2019-04-24 17:38:44  [ main:111323 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111323 ] - [ INFO ]  MMDetail:BILLNO:TI20190407006
+2019-04-24 17:38:44  [ main:111323 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111323 ] - [ INFO ]  MMDetail:GW:126.42
+2019-04-24 17:38:44  [ main:111323 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111323 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 09:40:53
+2019-04-24 17:38:44  [ main:111323 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111323 ] - [ INFO ]  MMDetail:WD:104.24
+2019-04-24 17:38:44  [ main:111323 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111324 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111324 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111324 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 12:21:17
+2019-04-24 17:38:44  [ main:111324 ] - [ INFO ]  MMDetail:GJ:104.24
+2019-04-24 17:38:44  [ main:111324 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111324 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111324 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111324 ] - [ INFO ]  MMDetail:PZ:22.18
+2019-04-24 17:38:44  [ main:111324 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111324 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111325 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111325 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111325 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111325 ] - [ INFO ]  MMDetail:NW:139.22
+2019-04-24 17:38:44  [ main:111325 ] - [ INFO ]  MMDetail:TN:冀DY7289
+2019-04-24 17:38:44  [ main:111325 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111325 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111325 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111325 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111326 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111326 ] - [ INFO ]  MMDetail:DNO:TID4700A9382838
+2019-04-24 17:38:44  [ main:111326 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111326 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111326 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111326 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111327 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111327 ] - [ INFO ]  MMDetail:IECODE:IETI20190407005
+2019-04-24 17:38:44  [ main:111327 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111327 ] - [ INFO ]  MMDetail:BILLNO:TI20190407006
+2019-04-24 17:38:44  [ main:111327 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111327 ] - [ INFO ]  MMDetail:GW:164.3
+2019-04-24 17:38:44  [ main:111327 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111327 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 08:37:47
+2019-04-24 17:38:44  [ main:111327 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111327 ] - [ INFO ]  MMDetail:WD:139.22
+2019-04-24 17:38:44  [ main:111328 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111328 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111328 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111328 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 09:24:00
+2019-04-24 17:38:44  [ main:111328 ] - [ INFO ]  MMDetail:GJ:139.22
+2019-04-24 17:38:44  [ main:111328 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111328 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111328 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111328 ] - [ INFO ]  MMDetail:PZ:25.08
+2019-04-24 17:38:44  [ main:111328 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111329 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111329 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111329 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111329 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111329 ] - [ INFO ]  MMDetail:NW:89.66
+2019-04-24 17:38:44  [ main:111329 ] - [ INFO ]  MMDetail:TN:冀DX7645
+2019-04-24 17:38:44  [ main:111329 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111330 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111330 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111330 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111330 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111330 ] - [ INFO ]  MMDetail:DNO:TID4607A9382750
+2019-04-24 17:38:44  [ main:111330 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111330 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111330 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111332 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111332 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111332 ] - [ INFO ]  MMDetail:IECODE:IETI20190407005
+2019-04-24 17:38:44  [ main:111332 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111333 ] - [ INFO ]  MMDetail:BILLNO:TI20190407006
+2019-04-24 17:38:44  [ main:111333 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111333 ] - [ INFO ]  MMDetail:GW:110.06
+2019-04-24 17:38:44  [ main:111333 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111333 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 05:26:58
+2019-04-24 17:38:44  [ main:111333 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111333 ] - [ INFO ]  MMDetail:WD:89.66
+2019-04-24 17:38:44  [ main:111333 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111333 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111333 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111334 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 07:29:32
+2019-04-24 17:38:44  [ main:111334 ] - [ INFO ]  MMDetail:GJ:89.66
+2019-04-24 17:38:44  [ main:111334 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111334 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111365 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111365 ] - [ INFO ]  MMDetail:PZ:20.4
+2019-04-24 17:38:44  [ main:111365 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111365 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111365 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111365 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111365 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111365 ] - [ INFO ]  MMDetail:NW:146.96
+2019-04-24 17:38:44  [ main:111365 ] - [ INFO ]  MMDetail:TN:冀DQ6815
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:DNO:TID4705A9382678
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111366 ] - [ INFO ]  MMDetail:IECODE:IETI20190407005
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:BILLNO:TI20190407006
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:GW:174.72
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 03:50:43
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:WD:146.96
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111367 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 06:34:10
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:GJ:146.96
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:PZ:27.76
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111368 ] - [ INFO ]  MMDetail:NW:144.84
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:TN:冀DQ6656
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:DNO:TID4710A9382627
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111369 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111376 ] - [ INFO ]  MMDetail:IECODE:IETI20190407005
+2019-04-24 17:38:44  [ main:111376 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111376 ] - [ INFO ]  MMDetail:BILLNO:TI20190407006
+2019-04-24 17:38:44  [ main:111376 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:GW:172.56
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 02:35:00
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:WD:144.84
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 04:55:49
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:GJ:144.84
+2019-04-24 17:38:44  [ main:111381 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:PZ:27.72
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:NW:149.56
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:TN:冀DR6728
+2019-04-24 17:38:44  [ main:111382 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:DNO:TID4702A9382622
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:IECODE:IETI20190407005
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111383 ] - [ INFO ]  MMDetail:BILLNO:TI20190407006
+2019-04-24 17:38:44  [ main:111384 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111384 ] - [ INFO ]  MMDetail:GW:177.04
+2019-04-24 17:38:44  [ main:111384 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111384 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 02:30:20
+2019-04-24 17:38:44  [ main:111384 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111384 ] - [ INFO ]  MMDetail:WD:149.56
+2019-04-24 17:38:44  [ main:111384 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111384 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111395 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111405 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 04:18:46
+2019-04-24 17:38:44  [ main:111406 ] - [ INFO ]  MMDetail:GJ:149.56
+2019-04-24 17:38:44  [ main:111407 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111407 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111415 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111415 ] - [ INFO ]  MMDetail:PZ:27.48
+2019-04-24 17:38:44  [ main:111415 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111415 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111447 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111447 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111447 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111447 ] - [ INFO ]  MMDetail:NW:143.24
+2019-04-24 17:38:44  [ main:111461 ] - [ INFO ]  MMDetail:TN:冀DQ7028
+2019-04-24 17:38:44  [ main:111461 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111461 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111461 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111461 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:DNO:TID4711A9382620
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:IECODE:IETI20190407005
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:BILLNO:TI20190407006
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111462 ] - [ INFO ]  MMDetail:GW:171.16
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 02:28:23
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:WD:143.24
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 04:04:13
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:GJ:143.24
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:PZ:27.92
+2019-04-24 17:38:44  [ main:111463 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111464 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111464 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111464 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111464 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111467 ] - [ INFO ]  MMDetail:NW:144.36
+2019-04-24 17:38:44  [ main:111467 ] - [ INFO ]  MMDetail:TN:冀DQ6976
+2019-04-24 17:38:44  [ main:111467 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111467 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111467 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111467 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:DNO:TID4712A9382612
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:IECODE:IETI20190407005
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:BILLNO:TI20190407006
+2019-04-24 17:38:44  [ main:111468 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:GW:172.02
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 02:23:49
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:WD:144.36
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 03:44:58
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:GJ:144.36
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111469 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:PZ:27.66
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:NW:148.74
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:TN:冀DQ8520
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111470 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111471 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:DNO:TID4705A9382609
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:IECODE:IETI20190407005
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111472 ] - [ INFO ]  MMDetail:BILLNO:TI20190407006
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:GW:176.7
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 02:20:37
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:GRP:1904233K129
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:WD:148.74
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 03:33:05
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:GJ:148.74
+2019-04-24 17:38:44  [ main:111473 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:PZ:27.96
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:NW:142.92
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:TN:冀DQ9726
+2019-04-24 17:38:44  [ main:111474 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:DNO:TID4701A9382638
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:IECODE:IETI20190407006
+2019-04-24 17:38:44  [ main:111475 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:BILLNO:TI20190407007
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:BILLTM:2019-04-07
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:GW:170.82
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 02:44:56
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:GRP:1904233K130
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:WD:142.92
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111476 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 05:14:10
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:GJ:142.92
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:PZ:27.9
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111477 ] - [ INFO ]  MMDetail:NW:55.96
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:TN:冀DT0855
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:DNO:TID4712A9383036
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111478 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:IECODE:IETI20190422000
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:BILLNO:TI20190422002
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:BILLTM:2019-04-22
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:GW:71.36
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 10:20:14
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:WD:55.96
+2019-04-24 17:38:44  [ main:111479 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 15:31:10
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:GJ:55.96
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:PZ:15.4
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111480 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:NW:55.84
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:TN:冀DY3239
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:DNO:TID4702A9383008
+2019-04-24 17:38:44  [ main:111481 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:IECODE:IETI20190422000
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:BILLNO:TI20190422002
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:BILLTM:2019-04-22
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:GW:72.1
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 10:12:03
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111482 ] - [ INFO ]  MMDetail:WD:55.84
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 15:03:14
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:GJ:55.84
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:PZ:16.26
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111483 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:NW:54.92
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:TN:冀DW0017
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:DNO:TID4710A9382962
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111484 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111485 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111489 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111489 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111489 ] - [ INFO ]  MMDetail:IECODE:IETI20190422000
+2019-04-24 17:38:44  [ main:111489 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111489 ] - [ INFO ]  MMDetail:BILLNO:TI20190422002
+2019-04-24 17:38:44  [ main:111489 ] - [ INFO ]  MMDetail:BILLTM:2019-04-22
+2019-04-24 17:38:44  [ main:111489 ] - [ INFO ]  MMDetail:GW:71.04
+2019-04-24 17:38:44  [ main:111489 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111489 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 09:49:47
+2019-04-24 17:38:44  [ main:111489 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:WD:54.92
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 14:28:56
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:GJ:54.92
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:PZ:16.12
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111490 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:NW:55.48
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:TN:冀DX3801
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:DNO:TID4607A9383740
+2019-04-24 17:38:44  [ main:111491 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:IECODE:IETI20190423000
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:BILLNO:TI20190423011
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:BILLTM:2019-04-23
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:GW:74.88
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111492 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 16:04:07
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:WD:55.48
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:FWDR:舞钢钢联物流有限公司
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 16:44:30
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:GJ:55.48
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:PZ:19.4
+2019-04-24 17:38:44  [ main:111493 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:NW:60.38
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:TN:冀DZ2781
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111494 ] - [ INFO ]  MMDetail:DNO:TID4608A9382939
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:IECODE:IETI20190419000
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:BILLNO:TI20190419008
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:BILLTM:2019-04-19
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:GW:78.22
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111495 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 09:35:06
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:WD:60.38
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:FWDR:邯郸市瑞达物流有限公司
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 11:45:22
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:GJ:60.38
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:PZ:17.84
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111496 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111497 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111497 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111497 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111497 ] - [ INFO ]  MMDetail:NW:60.52
+2019-04-24 17:38:44  [ main:111497 ] - [ INFO ]  MMDetail:TN:冀DT3003
+2019-04-24 17:38:44  [ main:111497 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111497 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111497 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111497 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111497 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:DNO:TID4707A9383202
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:IECODE:IETI20190419001
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:BILLNO:TI20190419009
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:BILLTM:2019-04-19
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:GW:76.44
+2019-04-24 17:38:44  [ main:111498 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111502 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 11:20:27
+2019-04-24 17:38:44  [ main:111502 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111502 ] - [ INFO ]  MMDetail:WD:60.52
+2019-04-24 17:38:44  [ main:111502 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111502 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:44  [ main:111502 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111502 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 16:13:13
+2019-04-24 17:38:44  [ main:111502 ] - [ INFO ]  MMDetail:GJ:60.52
+2019-04-24 17:38:44  [ main:111502 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111502 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:PZ:15.92
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:NW:65.9
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:TN:冀D5K800
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111503 ] - [ INFO ]  MMDetail:ST:黄骅港
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:DNO:TID4709A9383024
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:IECODE:IETI20190419001
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:BILLNO:TI20190419009
+2019-04-24 17:38:44  [ main:111504 ] - [ INFO ]  MMDetail:BILLTM:2019-04-19
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:GW:81.52
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 10:17:03
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:WD:65.9
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 15:19:48
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:GJ:65.9
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:SPNO:1912
+2019-04-24 17:38:44  [ main:111505 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:PZ:15.62
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:NW:138.06
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:TN:冀DT5286
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:ST:黄骅大港
+2019-04-24 17:38:44  [ main:111506 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:DNO:TID4702A9384435
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:IECODE:IETI20190412000
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:BILLNO:TI20190412005
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:BILLTM:2019-04-12
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:GW:165.16
+2019-04-24 17:38:44  [ main:111507 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111508 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 23:56:27
+2019-04-24 17:38:44  [ main:111508 ] - [ INFO ]  MMDetail:GRP:1904243K137
+2019-04-24 17:38:44  [ main:111508 ] - [ INFO ]  MMDetail:WD:138.06
+2019-04-24 17:38:44  [ main:111508 ] - [ INFO ]  MMDetail:PZSJ:2019-04-24
+2019-04-24 17:38:44  [ main:111508 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:44  [ main:111508 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111508 ] - [ INFO ]  MMDetail:PZSJA:2019-04-24 00:27:14
+2019-04-24 17:38:44  [ main:111508 ] - [ INFO ]  MMDetail:GJ:138.06
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:SPNO:1925
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:PZ:27.1
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:NW:140.1
+2019-04-24 17:38:44  [ main:111509 ] - [ INFO ]  MMDetail:TN:冀DQ4476
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:ST:黄骅大港
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:DNO:TID4705A9384419
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:IECODE:IETI20190412000
+2019-04-24 17:38:44  [ main:111510 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:BILLNO:TI20190412005
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:BILLTM:2019-04-12
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:GW:165.2
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 23:45:06
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:GRP:1904243K137
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:WD:140.1
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:PZSJ:2019-04-24
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:PZSJA:2019-04-24 00:24:55
+2019-04-24 17:38:44  [ main:111511 ] - [ INFO ]  MMDetail:GJ:140.1
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:SPNO:1925
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:PZ:25.1
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:NW:144.36
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:TN:冀DR6186
+2019-04-24 17:38:44  [ main:111512 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:ST:黄骅大港
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:DNO:TID4709A9382952
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:IECODE:IETI20190412000
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111513 ] - [ INFO ]  MMDetail:BILLNO:TI20190412005
+2019-04-24 17:38:44  [ main:111514 ] - [ INFO ]  MMDetail:BILLTM:2019-04-12
+2019-04-24 17:38:44  [ main:111514 ] - [ INFO ]  MMDetail:GW:171.58
+2019-04-24 17:38:44  [ main:111514 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111514 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 09:43:13
+2019-04-24 17:38:44  [ main:111514 ] - [ INFO ]  MMDetail:GRP:1904233K132
+2019-04-24 17:38:44  [ main:111514 ] - [ INFO ]  MMDetail:WD:144.36
+2019-04-24 17:38:44  [ main:111514 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111514 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:44  [ main:111514 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 14:12:10
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:GJ:144.36
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:SPNO:1925
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:PZ:27.22
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111515 ] - [ INFO ]  MMDetail:NW:146.58
+2019-04-24 17:38:44  [ main:111516 ] - [ INFO ]  MMDetail:TN:冀DW1381
+2019-04-24 17:38:44  [ main:111537 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111537 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111631 ] - [ INFO ]  MMDetail:ST:黄骅大港
+2019-04-24 17:38:44  [ main:111631 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111631 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111631 ] - [ INFO ]  MMDetail:DNO:TID4705A9382867
+2019-04-24 17:38:44  [ main:111631 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111631 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111631 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111631 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:IECODE:IETI20190412000
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:BILLNO:TI20190412005
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:BILLTM:2019-04-12
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:GW:175.42
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 08:55:30
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:GRP:1904233K133
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:WD:146.58
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111632 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 11:24:31
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:GJ:146.58
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:SPNO:1925
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:PZ:28.84
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111633 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:NW:147.02
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:TN:冀DW2785
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:ST:黄骅大港
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:DNO:TID4703A9382809
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111634 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:IECODE:IETI20190412000
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:BILLNO:TI20190412005
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:BILLTM:2019-04-12
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:GW:175.96
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 08:10:20
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:GRP:1904233K132
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:WD:147.02
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:44  [ main:111635 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 09:03:53
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:GJ:147.02
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:SPNO:1925
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:PZ:28.94
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:44  [ main:111636 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:NW:157.4
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:TN:冀DY6939
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:ST:黄骅大港
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:DNO:TID4711A9382663
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:44  [ main:111637 ] - [ INFO ]  MMDetail:IECODE:IETI20190412000
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:BILLNO:TI20190412005
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:BILLTM:2019-04-12
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:GW:186.6
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 03:34:08
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:GRP:1904233K132
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:WD:157.4
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:44  [ main:111638 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 06:20:50
+2019-04-24 17:38:44  [ main:111639 ] - [ INFO ]  MMDetail:GJ:157.4
+2019-04-24 17:38:44  [ main:111639 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:44  [ main:111639 ] - [ INFO ]  MMDetail:SPNO:1925
+2019-04-24 17:38:44  [ main:111639 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:44  [ main:111639 ] - [ INFO ]  MMDetail:PZ:29.2
+2019-04-24 17:38:44  [ main:111639 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:44  [ main:111639 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:44  [ main:111639 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:45  [ main:111670 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:45  [ main:111670 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:45  [ main:111671 ] - [ INFO ]  MMDetail:NW:158.4
+2019-04-24 17:38:45  [ main:111671 ] - [ INFO ]  MMDetail:TN:冀DY3598
+2019-04-24 17:38:45  [ main:111716 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:45  [ main:111716 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:45  [ main:111716 ] - [ INFO ]  MMDetail:ST:黄骅大港
+2019-04-24 17:38:45  [ main:111716 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:45  [ main:111716 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:45  [ main:111716 ] - [ INFO ]  MMDetail:DNO:TID4703A9382660
+2019-04-24 17:38:45  [ main:111716 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:IECODE:IETI20190412000
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:BILLNO:TI20190412005
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:BILLTM:2019-04-12
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:GW:187.16
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 03:30:26
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:GRP:1904233K132
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:WD:158.4
+2019-04-24 17:38:45  [ main:111717 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 06:05:55
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:GJ:158.4
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:SPNO:1925
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:PZ:28.76
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:BILLST:已卸车
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:TF:原料部
+2019-04-24 17:38:45  [ main:111718 ] - [ INFO ]  MMDetail:MGRP:进口粉矿
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:NW:141.86
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:TN:冀DQ9807
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:TTYPE:汽车
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:STWGT:0
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:ST:黄骅大港
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:STS_WX_COUNT:0
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:MZSJ:2019-04-23
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:DNO:TID4705A9383823
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:KH:0
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:MATNRCODE:31106013
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:MATNR:扬迪粉
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:SF:null
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:STS:已卸车
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:IECODE:IETI20190412000
+2019-04-24 17:38:45  [ main:111719 ] - [ INFO ]  MMDetail:KDL:0
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:BILLNO:TI20190412005
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:BILLTM:2019-04-12
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:GW:171.38
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:TXNO:null
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:MZSJA:2019-04-23 16:41:30
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:GRP:1904233K134
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:WD:141.86
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:PZSJ:2019-04-23
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:FWDR:邯郸国际陆港有限公司
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:CYD:null
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:PZSJA:2019-04-23 17:28:00
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:GJ:141.86
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:STS_YX_COUNT:1
+2019-04-24 17:38:45  [ main:111720 ] - [ INFO ]  MMDetail:SPNO:1925
+2019-04-24 17:38:45  [ main:111721 ] - [ INFO ]  MMDetail:CN:null
+2019-04-24 17:38:45  [ main:111721 ] - [ INFO ]  MMDetail:PZ:29.52
+2019-04-24 17:38:45  [ main:111721 ] - [ INFO ]  MMDetail:TW:中心库贮运中心
+2019-04-24 17:38:45  [ main:111721 ] - [ INFO ]  MMDetail:TV:0
+2019-04-24 17:38:45  [ main:111788 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 3000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> mysqlserver, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.microsoft.sqlserver.jdbc.SQLServerDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2tomxca2lu5vnt59pvb0|36dd725b, idleConnectionTestPeriod -> 30, initialPoolSize -> 100, jdbcUrl -> jdbc:sqlserver://10.0.9.2:1433;databaseName=hgjl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 30, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 1000, maxStatements -> 0, maxStatementsPerConnection -> 5, minPoolSize -> 50, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2019-04-24 17:38:45  [ main:112154 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112155 ] - [ INFO ]  JLDetail:prohuskweight:16.7000007629395
+2019-04-24 17:38:45  [ main:112155 ] - [ INFO ]  JLDetail:progrossweight:77.0
+2019-04-24 17:38:45  [ main:112155 ] - [ INFO ]  JLDetail:grossroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112163 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112163 ] - [ INFO ]  JLDetail:prohuskweight:30.0499992370605
+2019-04-24 17:38:45  [ main:112163 ] - [ INFO ]  JLDetail:progrossweight:178.899993896484
+2019-04-24 17:38:45  [ main:112163 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112177 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112177 ] - [ INFO ]  JLDetail:prohuskweight:30.2999992370605
+2019-04-24 17:38:45  [ main:112177 ] - [ INFO ]  JLDetail:progrossweight:173.0
+2019-04-24 17:38:45  [ main:112177 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112182 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112183 ] - [ INFO ]  JLDetail:prohuskweight:28.2000007629395
+2019-04-24 17:38:45  [ main:112183 ] - [ INFO ]  JLDetail:progrossweight:169.5
+2019-04-24 17:38:45  [ main:112183 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112193 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112193 ] - [ INFO ]  JLDetail:prohuskweight:30.1499996185303
+2019-04-24 17:38:45  [ main:112193 ] - [ INFO ]  JLDetail:progrossweight:173.300003051758
+2019-04-24 17:38:45  [ main:112193 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112198 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112198 ] - [ INFO ]  JLDetail:prohuskweight:25.8500003814697
+2019-04-24 17:38:45  [ main:112198 ] - [ INFO ]  JLDetail:progrossweight:154.75
+2019-04-24 17:38:45  [ main:112198 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112207 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112207 ] - [ INFO ]  JLDetail:prohuskweight:26.75
+2019-04-24 17:38:45  [ main:112207 ] - [ INFO ]  JLDetail:progrossweight:158.550003051758
+2019-04-24 17:38:45  [ main:112207 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112220 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112220 ] - [ INFO ]  JLDetail:prohuskweight:19.1499996185303
+2019-04-24 17:38:45  [ main:112221 ] - [ INFO ]  JLDetail:progrossweight:131.899993896484
+2019-04-24 17:38:45  [ main:112221 ] - [ INFO ]  JLDetail:grossroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112232 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112232 ] - [ INFO ]  JLDetail:prohuskweight:28.75
+2019-04-24 17:38:45  [ main:112233 ] - [ INFO ]  JLDetail:progrossweight:172.649993896484
+2019-04-24 17:38:45  [ main:112233 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112239 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112239 ] - [ INFO ]  JLDetail:prohuskweight:27.75
+2019-04-24 17:38:45  [ main:112239 ] - [ INFO ]  JLDetail:progrossweight:178.800003051758
+2019-04-24 17:38:45  [ main:112239 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112253 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112253 ] - [ INFO ]  JLDetail:prohuskweight:20.0499992370605
+2019-04-24 17:38:45  [ main:112253 ] - [ INFO ]  JLDetail:progrossweight:115.5
+2019-04-24 17:38:45  [ main:112253 ] - [ INFO ]  JLDetail:grossroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112265 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112265 ] - [ INFO ]  JLDetail:prohuskweight:20.25
+2019-04-24 17:38:45  [ main:112265 ] - [ INFO ]  JLDetail:progrossweight:111.800003051758
+2019-04-24 17:38:45  [ main:112266 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112284 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112284 ] - [ INFO ]  JLDetail:prohuskweight:28.4500007629395
+2019-04-24 17:38:45  [ main:112284 ] - [ INFO ]  JLDetail:progrossweight:166.899993896484
+2019-04-24 17:38:45  [ main:112284 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112295 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112295 ] - [ INFO ]  JLDetail:prohuskweight:28.5499992370605
+2019-04-24 17:38:45  [ main:112295 ] - [ INFO ]  JLDetail:progrossweight:173.25
+2019-04-24 17:38:45  [ main:112296 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112319 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112319 ] - [ INFO ]  JLDetail:prohuskweight:30.9500007629395
+2019-04-24 17:38:45  [ main:112320 ] - [ INFO ]  JLDetail:progrossweight:177.149993896484
+2019-04-24 17:38:45  [ main:112320 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112329 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112330 ] - [ INFO ]  JLDetail:prohuskweight:22.8500003814697
+2019-04-24 17:38:45  [ main:112331 ] - [ INFO ]  JLDetail:progrossweight:126.75
+2019-04-24 17:38:45  [ main:112331 ] - [ INFO ]  JLDetail:grossroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112340 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112341 ] - [ INFO ]  JLDetail:prohuskweight:25.5499992370605
+2019-04-24 17:38:45  [ main:112341 ] - [ INFO ]  JLDetail:progrossweight:164.600006103516
+2019-04-24 17:38:45  [ main:112341 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112356 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112356 ] - [ INFO ]  JLDetail:prohuskweight:20.3999996185303
+2019-04-24 17:38:45  [ main:112357 ] - [ INFO ]  JLDetail:progrossweight:109.75
+2019-04-24 17:38:45  [ main:112357 ] - [ INFO ]  JLDetail:grossroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112365 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112365 ] - [ INFO ]  JLDetail:prohuskweight:27.7999992370605
+2019-04-24 17:38:45  [ main:112365 ] - [ INFO ]  JLDetail:progrossweight:174.550003051758
+2019-04-24 17:38:45  [ main:112365 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112375 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112376 ] - [ INFO ]  JLDetail:prohuskweight:27.6499996185303
+2019-04-24 17:38:45  [ main:112376 ] - [ INFO ]  JLDetail:progrossweight:172.350006103516
+2019-04-24 17:38:45  [ main:112376 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112387 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112387 ] - [ INFO ]  JLDetail:prohuskweight:28.25
+2019-04-24 17:38:45  [ main:112387 ] - [ INFO ]  JLDetail:progrossweight:177.649993896484
+2019-04-24 17:38:45  [ main:112387 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112396 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112396 ] - [ INFO ]  JLDetail:prohuskweight:28.5499992370605
+2019-04-24 17:38:45  [ main:112396 ] - [ INFO ]  JLDetail:progrossweight:171.550003051758
+2019-04-24 17:38:45  [ main:112396 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112407 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112407 ] - [ INFO ]  JLDetail:prohuskweight:27.8500003814697
+2019-04-24 17:38:45  [ main:112407 ] - [ INFO ]  JLDetail:progrossweight:171.949996948242
+2019-04-24 17:38:45  [ main:112407 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112412 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112412 ] - [ INFO ]  JLDetail:prohuskweight:28.0499992370605
+2019-04-24 17:38:45  [ main:112412 ] - [ INFO ]  JLDetail:progrossweight:176.649993896484
+2019-04-24 17:38:45  [ main:112412 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112421 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112421 ] - [ INFO ]  JLDetail:prohuskweight:28.2999992370605
+2019-04-24 17:38:45  [ main:112421 ] - [ INFO ]  JLDetail:progrossweight:171.050003051758
+2019-04-24 17:38:45  [ main:112421 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112427 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112427 ] - [ INFO ]  JLDetail:prohuskweight:15.3500003814697
+2019-04-24 17:38:45  [ main:112427 ] - [ INFO ]  JLDetail:progrossweight:71.1999969482422
+2019-04-24 17:38:45  [ main:112427 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112432 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112432 ] - [ INFO ]  JLDetail:prohuskweight:16.2999992370605
+2019-04-24 17:38:45  [ main:112432 ] - [ INFO ]  JLDetail:progrossweight:72.6999969482422
+2019-04-24 17:38:45  [ main:112432 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112438 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112438 ] - [ INFO ]  JLDetail:prohuskweight:16.1499996185303
+2019-04-24 17:38:45  [ main:112438 ] - [ INFO ]  JLDetail:progrossweight:71.1500015258789
+2019-04-24 17:38:45  [ main:112438 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112443 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112444 ] - [ INFO ]  JLDetail:prohuskweight:19.3500003814697
+2019-04-24 17:38:45  [ main:112444 ] - [ INFO ]  JLDetail:progrossweight:74.6500015258789
+2019-04-24 17:38:45  [ main:112444 ] - [ INFO ]  JLDetail:grossroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112450 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112450 ] - [ INFO ]  JLDetail:prohuskweight:17.9500007629395
+2019-04-24 17:38:45  [ main:112450 ] - [ INFO ]  JLDetail:progrossweight:78.1500015258789
+2019-04-24 17:38:45  [ main:112451 ] - [ INFO ]  JLDetail:grossroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112461 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112461 ] - [ INFO ]  JLDetail:prohuskweight:16.0
+2019-04-24 17:38:45  [ main:112461 ] - [ INFO ]  JLDetail:progrossweight:76.5
+2019-04-24 17:38:45  [ main:112462 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112469 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112469 ] - [ INFO ]  JLDetail:prohuskweight:15.6800003051758
+2019-04-24 17:38:45  [ main:112469 ] - [ INFO ]  JLDetail:progrossweight:81.5199966430664
+2019-04-24 17:38:45  [ main:112469 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112476 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112476 ] - [ INFO ]  JLDetail:prohuskweight:27.3600006103516
+2019-04-24 17:38:45  [ main:112476 ] - [ INFO ]  JLDetail:progrossweight:165.539993286133
+2019-04-24 17:38:45  [ main:112476 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112481 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112481 ] - [ INFO ]  JLDetail:prohuskweight:25.2600002288818
+2019-04-24 17:38:45  [ main:112481 ] - [ INFO ]  JLDetail:progrossweight:165.300003051758
+2019-04-24 17:38:45  [ main:112481 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112489 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112492 ] - [ INFO ]  JLDetail:prohuskweight:27.4400005340576
+2019-04-24 17:38:45  [ main:112492 ] - [ INFO ]  JLDetail:progrossweight:171.860000610352
+2019-04-24 17:38:45  [ main:112492 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112497 ] - [ INFO ]  JLDetail:huskroom:仓储西门北秤
+2019-04-24 17:38:45  [ main:112497 ] - [ INFO ]  JLDetail:prohuskweight:28.7600002288818
+2019-04-24 17:38:45  [ main:112497 ] - [ INFO ]  JLDetail:progrossweight:175.279998779297
+2019-04-24 17:38:45  [ main:112497 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112502 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112502 ] - [ INFO ]  JLDetail:prohuskweight:29.1399993896484
+2019-04-24 17:38:45  [ main:112502 ] - [ INFO ]  JLDetail:progrossweight:176.039993286133
+2019-04-24 17:38:45  [ main:112502 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112508 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112509 ] - [ INFO ]  JLDetail:prohuskweight:29.2800006866455
+2019-04-24 17:38:45  [ main:112509 ] - [ INFO ]  JLDetail:progrossweight:186.720001220703
+2019-04-24 17:38:45  [ main:112509 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112514 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112514 ] - [ INFO ]  JLDetail:prohuskweight:28.8999996185303
+2019-04-24 17:38:45  [ main:112514 ] - [ INFO ]  JLDetail:progrossweight:187.199996948242
+2019-04-24 17:38:45  [ main:112514 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112518 ] - [ INFO ]  JLDetail:huskroom:仓储西门南秤
+2019-04-24 17:38:45  [ main:112518 ] - [ INFO ]  JLDetail:prohuskweight:29.7199993133545
+2019-04-24 17:38:45  [ main:112518 ] - [ INFO ]  JLDetail:progrossweight:171.600006103516
+2019-04-24 17:38:45  [ main:112518 ] - [ INFO ]  JLDetail:grossroom:仓储西门南秤
+2019-04-24 17:38:48  [ main:115570 ] - [ INFO ]  responseResult:000001------用户名密码校验失败------20190424174142------E

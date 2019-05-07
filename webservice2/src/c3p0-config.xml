@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<!-- 默认配置，只可以出现一次 -->
+	<default-config>
+		<!-- 连接超时设置30秒 -->
+		<property name="checkoutTimeout">3000</property>
+		<!-- 30秒检查一次connection的空闲 -->
+		<property name="idleConnectionTestPeriod">30</property>
+		<!--初始化的池大小 -->
+		<property name="initialPoolSize">2</property>
+		<!-- 最多的一个connection空闲时间 -->
+		<property name="maxIdleTime">30</property>
+		<!-- 最多可以有多少个连接connection -->
+		<property name="maxPoolSize">100</property>
+		<!-- 最少的池中有几个连接 -->
+		<property name="minPoolSize">10</property>
+		<!-- 批处理的语句
+		 -->
+		<property name="maxStatements">50</property>
+		<!-- 每次增长几个连接 -->
+		<property name="acquireIncrement">3</property>
+		
+	</default-config>
+	<named-config name="mysql">
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">
+			<![CDATA[jdbc:mysql://127.0.0.1:3306/bookstore?useUnicode=true&characterEncoding=UTF-8]]>
+		</property>
+		<property name="user">root</property>
+		<property name="password">1234</property>
+		<property name="acquireIncrement">5</property><!-- 如果池中数据连接不够时一次增长多少个 -->
+		<property name="initialPoolSize">100</property>
+		<property name="minPoolSize">50</property>
+		<property name="maxPoolSize">1000</property>
+		<property name="maxStatements">0</property>
+		<property name="maxStatementsPerConnection">5</property> <!-- he's important, but there's only one of him -->
+	</named-config>
+	<named-config name="myoracle">
+		 <property name="driverClass">oracle.jdbc.driver.OracleDriver</property> 
+		<property name="jdbcUrl">
+			<![CDATA[jdbc:oracle:thin:@10.0.9.3:1521:hgmmdb]]>
+		</property>
+		<property name="user">mmappusr</property>
+		<property name="password">guanhuamm723</property> 
+		<property name="acquireIncrement">5</property><!-- 如果池中数据连接不够时一次增长多少个 -->
+		<property name="initialPoolSize">100</property>
+		<property name="minPoolSize">50</property>
+		<property name="maxPoolSize">1000</property>
+		<property name="maxStatements">0</property>
+		<property name="maxStatementsPerConnection">5</property> <!-- he's important, but there's only one of him -->
+	</named-config>
+	<named-config name="mysqlserver">
+		 <!-- 连接sqlserver -->
+		<property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property> 
+		<property name="jdbcUrl">
+			<![CDATA[jdbc:sqlserver://10.0.9.2:1433;databaseName=hgjl]]>
+		</property>
+		<property name="user">sa</property>
+		<property name="password">hgjl123</property>
+		<property name="acquireIncrement">5</property><!-- 如果池中数据连接不够时一次增长多少个 -->
+		<property name="initialPoolSize">100</property>
+		<property name="minPoolSize">50</property>
+		<property name="maxPoolSize">1000</property>
+		<property name="maxStatements">0</property>
+		<property name="maxStatementsPerConnection">5</property> <!-- he's important, but there's only one of him -->
+	</named-config>
+</c3p0-config> 
